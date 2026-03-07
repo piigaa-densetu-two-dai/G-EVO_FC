@@ -245,7 +245,7 @@ static void playvgm(uint8_t *data, uint32_t len)
 					pos += (7 + *(uint32_t *)&data[pos + 3] - 1);
 					break;
 				}
-                                if (swap && (*(uint32_t *)&data[pos + 3] == 3)) {
+				if (swap && (*(uint32_t *)&data[pos + 3] == 3)) {
 					switch (*(uint16_t *)&data[pos + 7]) { /* 悪魔城・マダラ相互変換 */
 					case 0x9001:
 					case 0x9002:
