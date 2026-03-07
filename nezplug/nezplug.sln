@@ -1,0 +1,61 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32929.385
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "in_nez", "src\in_nez.vcxproj", "{270A692A-1D94-4453-9C30-BB31D50E1211}"
+	ProjectSection(ProjectDependencies) = postProject
+		{5B538F02-65F1-4B82-A357-3426BA9DBD3E} = {5B538F02-65F1-4B82-A357-3426BA9DBD3E}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "kb_nez", "src\kb_nez.vcxproj", "{57DB62E3-F4E7-4EB1-919E-1BAC0BEF460F}"
+	ProjectSection(ProjectDependencies) = postProject
+		{5B538F02-65F1-4B82-A357-3426BA9DBD3E} = {5B538F02-65F1-4B82-A357-3426BA9DBD3E}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "nezplug", "src\nezplug.vcxproj", "{5B538F02-65F1-4B82-A357-3426BA9DBD3E}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "npnez", "src\npnez.vcxproj", "{643AC8AA-9C23-4A2B-9928-FE0E578B1DB1}"
+	ProjectSection(ProjectDependencies) = postProject
+		{5B538F02-65F1-4B82-A357-3426BA9DBD3E} = {5B538F02-65F1-4B82-A357-3426BA9DBD3E}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+		Template|Win32 = Template|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{270A692A-1D94-4453-9C30-BB31D50E1211}.Debug|Win32.ActiveCfg = Debug|Win32
+		{270A692A-1D94-4453-9C30-BB31D50E1211}.Debug|Win32.Build.0 = Debug|Win32
+		{270A692A-1D94-4453-9C30-BB31D50E1211}.Release|Win32.ActiveCfg = Release|Win32
+		{270A692A-1D94-4453-9C30-BB31D50E1211}.Release|Win32.Build.0 = Release|Win32
+		{270A692A-1D94-4453-9C30-BB31D50E1211}.Template|Win32.ActiveCfg = Release|Win32
+		{270A692A-1D94-4453-9C30-BB31D50E1211}.Template|Win32.Build.0 = Release|Win32
+		{57DB62E3-F4E7-4EB1-919E-1BAC0BEF460F}.Debug|Win32.ActiveCfg = Debug|Win32
+		{57DB62E3-F4E7-4EB1-919E-1BAC0BEF460F}.Debug|Win32.Build.0 = Debug|Win32
+		{57DB62E3-F4E7-4EB1-919E-1BAC0BEF460F}.Release|Win32.ActiveCfg = Release|Win32
+		{57DB62E3-F4E7-4EB1-919E-1BAC0BEF460F}.Release|Win32.Build.0 = Release|Win32
+		{57DB62E3-F4E7-4EB1-919E-1BAC0BEF460F}.Template|Win32.ActiveCfg = Template|Win32
+		{57DB62E3-F4E7-4EB1-919E-1BAC0BEF460F}.Template|Win32.Build.0 = Template|Win32
+		{5B538F02-65F1-4B82-A357-3426BA9DBD3E}.Debug|Win32.ActiveCfg = Debug|Win32
+		{5B538F02-65F1-4B82-A357-3426BA9DBD3E}.Debug|Win32.Build.0 = Debug|Win32
+		{5B538F02-65F1-4B82-A357-3426BA9DBD3E}.Release|Win32.ActiveCfg = Release|Win32
+		{5B538F02-65F1-4B82-A357-3426BA9DBD3E}.Release|Win32.Build.0 = Release|Win32
+		{5B538F02-65F1-4B82-A357-3426BA9DBD3E}.Template|Win32.ActiveCfg = Template|Win32
+		{5B538F02-65F1-4B82-A357-3426BA9DBD3E}.Template|Win32.Build.0 = Template|Win32
+		{643AC8AA-9C23-4A2B-9928-FE0E578B1DB1}.Debug|Win32.ActiveCfg = Debug|Win32
+		{643AC8AA-9C23-4A2B-9928-FE0E578B1DB1}.Debug|Win32.Build.0 = Debug|Win32
+		{643AC8AA-9C23-4A2B-9928-FE0E578B1DB1}.Release|Win32.ActiveCfg = Release|Win32
+		{643AC8AA-9C23-4A2B-9928-FE0E578B1DB1}.Release|Win32.Build.0 = Release|Win32
+		{643AC8AA-9C23-4A2B-9928-FE0E578B1DB1}.Template|Win32.ActiveCfg = Template|Win32
+		{643AC8AA-9C23-4A2B-9928-FE0E578B1DB1}.Template|Win32.Build.0 = Template|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {FAB7B10A-3472-4007-A50F-0F1E27F1D44A}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,256 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Template|Win32">
+      <Configuration>Template</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <SccProjectName />
+    <SccLocalPath />
+    <ProjectGuid>{5B538F02-65F1-4B82-A357-3426BA9DBD3E}</ProjectGuid>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Template|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v120</PlatformToolset>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v120</PlatformToolset>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Template|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.Cpp.UpgradeFromVC60.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.Cpp.UpgradeFromVC60.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>.\..\Release\</OutDir>
+    <IntDir>.\..\Release\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>.\..\Debug\</OutDir>
+    <IntDir>.\..\Debug\</IntDir>
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <InlineFunctionExpansion>Default</InlineFunctionExpansion>
+      <StringPooling>true</StringPooling>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <Optimization>MaxSpeed</Optimization>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <WarningLevel>Level3</WarningLevel>
+      <AdditionalIncludeDirectories>format;device;zlib;cpu;.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AssemblerListingLocation>.\..\Release\</AssemblerListingLocation>
+      <BrowseInformation>true</BrowseInformation>
+      <PrecompiledHeaderOutputFile>.\..\Release\nezplug.pch</PrecompiledHeaderOutputFile>
+      <ObjectFileName>.\..\Release\</ObjectFileName>
+      <ProgramDataBaseFileName>.\..\Release\</ProgramDataBaseFileName>
+    </ClCompile>
+    <PostBuildEvent>
+      <Command>
+      </Command>
+    </PostBuildEvent>
+    <ResourceCompile>
+      <Culture>0x0409</Culture>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+    <Bscmake>
+      <SuppressStartupBanner>false</SuppressStartupBanner>
+      <OutputFile>.\..\Release\nezplug.bsc</OutputFile>
+    </Bscmake>
+    <Lib>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>.\..\Release\nezplug.lib</OutputFile>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <InlineFunctionExpansion>Default</InlineFunctionExpansion>
+      <FunctionLevelLinking>false</FunctionLevelLinking>
+      <Optimization>Disabled</Optimization>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <WarningLevel>Level4</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <AdditionalIncludeDirectories>format;device;zlib;cpu;.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AssemblerListingLocation>.\..\Debug\</AssemblerListingLocation>
+      <BrowseInformation>true</BrowseInformation>
+      <PrecompiledHeaderOutputFile>.\..\Debug\nezplug.pch</PrecompiledHeaderOutputFile>
+      <ObjectFileName>.\..\Debug\</ObjectFileName>
+      <ProgramDataBaseFileName>.\..\Debug\</ProgramDataBaseFileName>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+    </ClCompile>
+    <PostBuildEvent>
+      <Command>
+      </Command>
+    </PostBuildEvent>
+    <ResourceCompile>
+      <Culture>0x0409</Culture>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+    <Bscmake>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>.\..\Debug\nezplug.bsc</OutputFile>
+    </Bscmake>
+    <Lib>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>.\..\Debug\nezplug.lib</OutputFile>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="..\vgmwrite.h" />
+    <ClInclude Include="cpu\km6502\km2a03m.h" />
+    <ClInclude Include="cpu\km6502\km6280.h" />
+    <ClInclude Include="cpu\km6502\km6280m.h" />
+    <ClInclude Include="cpu\km6502\km6502.h" />
+    <ClInclude Include="cpu\km6502\km6502cd.h" />
+    <ClInclude Include="cpu\km6502\km6502ct.h" />
+    <ClInclude Include="cpu\km6502\km6502ex.h" />
+    <ClInclude Include="cpu\km6502\km6502ft.h" />
+    <ClInclude Include="cpu\km6502\km6502m.h" />
+    <ClInclude Include="cpu\km6502\km6502ot.h" />
+    <ClInclude Include="cpu\km6502\km65c02.h" />
+    <ClInclude Include="cpu\km6502\km65c02m.h" />
+    <ClInclude Include="cpu\km6502\kmconfig.h" />
+    <ClInclude Include="cpu\kmz80\kmevent.h" />
+    <ClInclude Include="cpu\kmz80\kmtypes.h" />
+    <ClInclude Include="cpu\kmz80\kmz80.h" />
+    <ClInclude Include="cpu\kmz80\kmz80i.h" />
+    <ClInclude Include="device\divfix.h" />
+    <ClInclude Include="device\incvgm.h" />
+    <ClInclude Include="device\kmsnddev.h" />
+    <ClInclude Include="device\nes\logtable.h" />
+    <ClInclude Include="device\nes\s_apu.h" />
+    <ClInclude Include="device\nes\s_fds.h" />
+    <ClInclude Include="device\nes\s_fme7.h" />
+    <ClInclude Include="device\nes\s_mmc5.h" />
+    <ClInclude Include="device\nes\s_n106.h" />
+    <ClInclude Include="device\nes\s_vrc6.h" />
+    <ClInclude Include="device\nes\s_vrc7.h" />
+    <ClInclude Include="device\opl\s_deltat.h" />
+    <ClInclude Include="device\opl\s_opl.h" />
+    <ClInclude Include="device\opl\s_opltbl.h" />
+    <ClInclude Include="device\s_dmg.h" />
+    <ClInclude Include="device\s_hes.h" />
+    <ClInclude Include="device\s_hesad.h" />
+    <ClInclude Include="device\s_logtbl.h" />
+    <ClInclude Include="device\s_psg.h" />
+    <ClInclude Include="device\s_scc.h" />
+    <ClInclude Include="device\s_sng.h" />
+    <ClInclude Include="format\audiohandler.h" />
+    <ClInclude Include="format\audiosys.h" />
+    <ClInclude Include="format\handler.h" />
+    <ClInclude Include="format\m_gbr.h" />
+    <ClInclude Include="format\m_hes.h" />
+    <ClInclude Include="format\m_kss.h" />
+    <ClInclude Include="format\m_nsd.h" />
+    <ClInclude Include="format\m_nsf.h" />
+    <ClInclude Include="format\m_sgc.h" />
+    <ClInclude Include="format\m_zxay.h" />
+    <ClInclude Include="format\nsf6502.h" />
+    <ClInclude Include="format\songinfo.h" />
+    <ClInclude Include="neserr.h" />
+    <ClInclude Include="nestypes.h" />
+    <ClInclude Include="nezplug.h" />
+    <ClInclude Include="ui\version.h" />
+    <ClInclude Include="zlib\crc32.h" />
+    <ClInclude Include="zlib\inffast.h" />
+    <ClInclude Include="zlib\inffixed.h" />
+    <ClInclude Include="zlib\inflate.h" />
+    <ClInclude Include="zlib\inftrees.h" />
+    <ClInclude Include="zlib\memzip.h" />
+    <ClInclude Include="zlib\nez.h" />
+    <ClInclude Include="zlib\nezuzext.h" />
+    <ClInclude Include="zlib\zconf.h" />
+    <ClInclude Include="zlib\zlib.h" />
+    <ClInclude Include="zlib\zutil.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\vgmwrite.c" />
+    <ClCompile Include="cpu\kmz80\kmdmg.c" />
+    <ClCompile Include="cpu\kmz80\kmevent.c" />
+    <ClCompile Include="cpu\kmz80\kmr800.c" />
+    <ClCompile Include="cpu\kmz80\kmz80.c" />
+    <ClCompile Include="cpu\kmz80\kmz80c.c" />
+    <ClCompile Include="cpu\kmz80\kmz80t.c" />
+    <ClCompile Include="cpu\kmz80\makeft.c" />
+    <ClCompile Include="device\nes\logtable.c" />
+    <ClCompile Include="device\nes\s_apu.c" />
+    <ClCompile Include="device\nes\s_fds.c" />
+    <ClCompile Include="device\nes\s_fds1.c" />
+    <ClCompile Include="device\nes\s_fds2.c" />
+    <ClCompile Include="device\nes\s_fds3.c" />
+    <ClCompile Include="device\nes\s_fme7.c" />
+    <ClCompile Include="device\nes\s_mmc5.c" />
+    <ClCompile Include="device\nes\s_n106.c" />
+    <ClCompile Include="device\nes\s_vrc6.c" />
+    <ClCompile Include="device\nes\s_vrc7.c" />
+    <ClCompile Include="device\opl\s_deltat.c" />
+    <ClCompile Include="device\opl\s_opl.c" />
+    <ClCompile Include="device\opl\s_opltbl.c" />
+    <ClCompile Include="device\s_dmg.c" />
+    <ClCompile Include="device\s_hes.c" />
+    <ClCompile Include="device\s_hesad.c" />
+    <ClCompile Include="device\s_logtbl.c" />
+    <ClCompile Include="device\s_psg.c" />
+    <ClCompile Include="device\s_scc.c" />
+    <ClCompile Include="device\s_sng.c" />
+    <ClCompile Include="format\audiosys.c" />
+    <ClCompile Include="format\handler.c" />
+    <ClCompile Include="format\m_gbr.c" />
+    <ClCompile Include="format\m_hes.c" />
+    <ClCompile Include="format\m_kss.c" />
+    <ClCompile Include="format\m_nsd.c" />
+    <ClCompile Include="format\m_nsf.c" />
+    <ClCompile Include="format\m_sgc.c" />
+    <ClCompile Include="format\m_zxay.c" />
+    <ClCompile Include="format\nezplug.c" />
+    <ClCompile Include="format\nsf6502.c" />
+    <ClCompile Include="format\songinfo.c" />
+    <ClCompile Include="zlib\adler32.c" />
+    <ClCompile Include="zlib\crc32.c" />
+    <ClCompile Include="zlib\inffast.c" />
+    <ClCompile Include="zlib\inflate.c" />
+    <ClCompile Include="zlib\inftrees.c" />
+    <ClCompile Include="zlib\memzip.c" />
+    <ClCompile Include="zlib\nez.c" />
+    <ClCompile Include="zlib\uncompr.c" />
+    <ClCompile Include="zlib\zutil.c" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
