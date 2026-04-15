@@ -15,6 +15,8 @@ NEZplug++ VGM mod改造版
 
 使い方
 
+要「Visual Studio 2013 の Visual C++ 再頒布可能パッケージ」
+
 * nezplay.exeを使用する場合。
 NEZplug++(http://offgao.net/program/nezplug++.html)からnezplug++.zipをダウンロード、解凍し、npnez.dllをここにあるもので上書きします。
 nezplay.exeを起動し、NSFファイルを再生するとNSFファイルと同じ場所にVGMファイルが作成されます。再生開始～再生停止までの一連の演奏情報がファイルに出力されます。
