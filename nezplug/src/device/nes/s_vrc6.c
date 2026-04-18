@@ -242,8 +242,6 @@ static void VRC6SoundSawReset(void *pNezPlay, VRC6_SAW *ch)
 	ch->cps = DivFix(NES_BASECYCLES, 24 * NESAudioFrequencyGet(pNezPlay), CPS_SHIFT);
 }
 
-extern Uint __fastcall GetNTSCPAL(void *pNezPlay);
-
 static void __fastcall VRC6SoundReset(void* pNezPlay)
 {
 	VRC6SOUND *vrc6s = ((NSFNSF*)((NEZ_PLAY*)pNezPlay)->nsf)->vrc6s;
@@ -252,7 +250,7 @@ static void __fastcall VRC6SoundReset(void* pNezPlay)
 	VRC6SoundSquareReset(pNezPlay, &vrc6s->square[1]);
 	VRC6SoundSawReset(pNezPlay, &vrc6s->saw);
 
-	vrc6s->vgm_idx = vgm_open(VGMC_NESAPU, (int)(NES_BASECYCLES / (double)GetNTSCPAL(pNezPlay) + 0.5));
+	vrc6s->vgm_idx = 0;
 }
 
 const static NES_RESET_HANDLER s_vrc6_reset_handler[] = {

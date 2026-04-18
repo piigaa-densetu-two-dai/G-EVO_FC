@@ -15,7 +15,7 @@ NEZplug++ VGM mod改造版
 
 使い方
 
-要「Visual Studio 2013 の Visual C++ 再頒布可能パッケージ」
+要「Visual Studio 2022 の Visual C++ 再頒布可能パッケージ」
 
 * nezplay.exeを使用する場合。
 NEZplug++(http://offgao.net/program/nezplug++.html)からnezplug++.zipをダウンロード、解凍し、npnez.dllをここにあるもので上書きします。

@@ -401,8 +401,6 @@ static NES_READ_HANDLER s_n106_read_handler[] =
 	{ 0,              0,              0, },
 };
 
-extern Uint __fastcall GetNTSCPAL(void *pNezPlay);
-
 static void __fastcall N106SoundReset(void* pNezPlay)
 {
 	N106SOUND *n106s = ((NSFNSF*)((NEZ_PLAY*)pNezPlay)->nsf)->n106s;
@@ -428,7 +426,7 @@ static void __fastcall N106SoundReset(void* pNezPlay)
 
 	n106s->ofscps = REAL_OFS_BASE * REAL_OFS_COUNT / NESAudioFrequencyGet(pNezPlay);
 
-	n106s->vgm_idx = vgm_open(VGMC_NESAPU, (int)(NES_BASECYCLES / (double)GetNTSCPAL(pNezPlay) + 0.5));
+	n106s->vgm_idx = 0;
 }
 
 const static NES_RESET_HANDLER s_n106_reset_handler[] = {

@@ -34,6 +34,7 @@
  * COMポートプログラミングのヒント
  *
  * 通信はUSBで完結しているのでCOMポートの通信速度等の設定は意味を持ちません。デフォルト設定のままで大丈夫です。
+ * fwrite等、書込みバッファを持つ関数で書込みを行なう場合はコマンド書込み直後にfflush等でデータを吐き出してください。
  *
  * その他
  *
@@ -142,6 +143,12 @@ static void initvgm(void)
 		apu[1] = addr;
 		write(port, apu, sizeof(apu));
         }
+	apu[1] = 0x2a; /* 0x408a */
+	apu[2] = 0xe8; /* FDS BIOSによって設定されるデフォルトのエンベロープ速度 */
+	write(port, apu, sizeof(apu));
+	apu[1] = 0x3f; /* 0x4023 */
+	apu[2] = 0x02; /* FDS音源機能を有効化 */
+	write(port, apu, sizeof(apu));
 
 	/* MMC5初期化 */
 	uint8_t mmc5[] = { 0x67, 0x66, 0xc2, 0x03, 0x00, 0x00, 0x00, 0x00, 0x50, 0x00 };
@@ -240,7 +247,8 @@ static void playvgm(uint8_t *data, uint32_t len)
 				break;
 			case 0x66: /* end */
 				return;
-                        case 0x67:
+			case 0x67:
+				/* アライメントされていないのでx86以外の場合は以下注意 */
 				if (data[pos + 2] != 0xc2) {
 					pos += (7 + *(uint32_t *)&data[pos + 3] - 1);
 					break;

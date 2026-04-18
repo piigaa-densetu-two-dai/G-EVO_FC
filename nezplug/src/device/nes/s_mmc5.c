@@ -378,8 +378,6 @@ static void __fastcall MMC5SoundDaReset(MMC5_DA *ch)
 	XMEMSET(ch, 0, sizeof(MMC5_DA));
 }
 
-extern Uint __fastcall GetNTSCPAL(void *pNezPlay);
-
 static void __fastcall MMC5SoundReset(void* pNezPlay)
 {
 	MMC5SOUND *mmc5 = ((NSFNSF*)((NEZ_PLAY*)pNezPlay)->nsf)->mmc5;
@@ -396,7 +394,7 @@ static void __fastcall MMC5SoundReset(void* pNezPlay)
 	MMC5SoundWrite(pNezPlay, 0x5010, 0x00);
 	MMC5SoundWrite(pNezPlay, 0x5011, 0x80);
 
-	mmc5->vgm_idx = vgm_open(VGMC_NESAPU, (int)(NES_BASECYCLES / (double)GetNTSCPAL(pNezPlay) + 0.5));
+	mmc5->vgm_idx = 0;
 }
 
 const static NES_RESET_HANDLER s_mmc5_reset_handler[] = {

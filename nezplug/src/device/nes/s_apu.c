@@ -1115,7 +1115,7 @@ static Uint32 DivFix(Uint32 p1, Uint32 p2, Uint32 fix)
 	return ret;
 }
 
-Uint __fastcall GetNTSCPAL(void *pNezPlay)
+static Uint __fastcall GetNTSCPAL(void *pNezPlay)
 {
 	Uint8 *nsfhead = NSFGetHeader((NEZ_PLAY*)pNezPlay);
 	if (nsfhead[0x7a] & 1){
